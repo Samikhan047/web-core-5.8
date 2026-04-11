@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPS - Services and Support</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        
+        <!-- Mobile Header -->
+        <header class="header mobile-only">
+            <div class="header-top">
+                <button class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo">
+                    <span class="logo-text">CPS</span>
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn">
+                        <i class="fas fa-tools"></i>
+                    </button>
+                    <button class="icon-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Tablet Header -->
+        <header class="header tablet-only">
+            <div class="header-top">
+                <button class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo">
+                    <span class="logo-text">CPS</span>
+                </div>
+            </div>
+            <div class="nav-row">
+                <button class="nav-btn">
+                    <i class="fas fa-phone-alt"></i> Submit a request
+                </button>
+                <button class="nav-btn secondary">
+                    <i class="fas fa-comments"></i> Feedback
+                </button>
+                <button class="nav-btn secondary">
+                    <i class="fas fa-user"></i> Account
+                </button>
+                <button class="nav-btn secondary">
+                    <i class="fas fa-tools"></i> Services
+                </button>
+                <button class="nav-btn secondary">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+        </header>
+
+        <!-- Desktop Header -->
+        <header class="header desktop-only" style="display: flex; flex-direction: column;">
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 24px 12px;">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <h1 class="page-title" style="font-size: 24px;">Services and support</h1>
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    
+                    <div class="service-actions" style="margin-left: 24px;">
+                        <button class="action-btn primary">
+                            <i class="fas fa-tools"></i> Submit a request
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-clipboard-check"></i> Repair status
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs-container">
+                <button class="tab active">Brands we repair</button>
+                <button class="tab">Devices we repair</button>
+                <button class="tab">Service prices</button>
+                <button class="tab">Addresses of service centres</button>
+                <button class="tab">Special prices</button>
+                <button class="tab">Reviews</button>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <main class="content-area">
+            <div class="content-grid">
+                <div class="content-left">
+                    <!-- Mobile Title -->
+                    <h2 class="section-title mobile-only">Services and support</h2>
+                    
+                    <!-- Mobile Tab -->
+                    <div class="mobile-tabs mobile-only">
+                        <button class=" tab">Devices we repair</button>
+                    </div>
+
+                    <!-- Tablet Title -->
+                    <h2 class="section-title tablet-only" style="margin-top: 0;">Services and support</h2>
+
+                    <div class="text-content">
+                        <p>We are an authorised service centre for Dell equipment repairs. Only with us can you repair your Dell laptop with the official manufacturer's warranty.</p>
+                        
+                        <p class="desktop-only" style="display: block;">We have been successfully operating since 1992 and have earned a reputation as a reliable partner, as evidenced by our large number of loyal customers. We take pride in the fact that clients come to us through recommendations and, in turn, recommend us to their family and friends.</p>
+                        
+                        <p class="tablet-only" style="display: block; margin-top: 12px;">We have been successfully operating since 1992 and have earned a reputation as a reliable partner.</p>
+                        
+                        <a href="#" class="read-more">
+                            Read more <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="CPS Service Center">
+                    <div class="cps-overlay">CPS</div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script>
+        
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
