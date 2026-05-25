@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: var(--bg-gray);
     color: var(--text-dark);
     line-height: 1.5;
@@ -134,13 +134,13 @@ body {
     box-shadow: 0 4px 12px rgba(233, 30, 99, 0.25);
 }
 
-.nav-btn.secondary {
+.header__button--secondary {
     background: transparent;
     color: var(--text-gray);
     border: 1px solid var(--border-color);
 }
 
-.nav-btn.secondary:hover {
+.header__button--secondary:hover {
     background: var(--bg-gray);
     border-color: var(--text-gray);
 }
@@ -256,10 +256,14 @@ body {
 }
 
 .content-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 48px;
-    align-items: start;
+    align-items: flex-start;
+}
+
+.content-left,
+.image-container {
+    flex: 1;
 }
 
 .content-left {
@@ -394,11 +398,21 @@ body {
         height: 36px;
     }
 
-    .nav-row,
-    .title-section,
-    .tabs-container {
-        display: none;
-    }
+    .title-section {
+    display: none;
+}
+
+.tabs-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tabs-container::-webkit-scrollbar {
+    display: none;
+}
 
     .mobile-tabs {
         display: block;
